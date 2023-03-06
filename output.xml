@@ -1,67 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.0 on win32)" generated="20230306 15:23:51.474" rpa="false" schemaversion="3">
-<suite id="s1" name="dropDown" source="C:\Users\KloverCloud\PycharmProjects\Robot_Framework_With_Python\Basic\dropDown\dropDown.robot">
-<test id="s1-t1" name="Handling DropDowns" line="10">
+<robot generator="Robot 6.0.2 (Python 3.9.0 on win32)" generated="20230306 17:07:57.282" rpa="false" schemaversion="3">
+<suite id="s1" name="implicitWait" source="C:\Users\KloverCloud\PycharmProjects\Robot_Framework_With_Python\Basic\speedTest\implicitWait.robot">
+<test id="s1-t1" name="Timeout Test" line="10">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230306 15:23:51.638" level="INFO">Opening browser 'chrome' to base url 'https://demo.guru99.com/test/newtours/register.php'.</msg>
-<status status="PASS" starttime="20230306 15:23:51.638" endtime="20230306 15:23:58.541"/>
+<msg timestamp="20230306 17:07:57.458" level="INFO">Opening browser 'chrome' to base url 'https://demowebshop.tricentis.com/register'.</msg>
+<status status="PASS" starttime="20230306 17:07:57.458" endtime="20230306 17:08:00.912"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230306 15:23:58.542" endtime="20230306 15:23:58.671"/>
+<status status="PASS" starttime="20230306 17:08:00.913" endtime="20230306 17:08:01.029"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230306 15:24:00.677" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230306 15:23:58.672" endtime="20230306 15:24:00.677"/>
+<kw name="Get Selenium Implicit Wait" library="SeleniumLibrary">
+<var>${ImplicitTime}</var>
+<doc>Gets the implicit wait value used by Selenium.</doc>
+<msg timestamp="20230306 17:08:01.029" level="INFO">${ImplicitTime} = 0 seconds</msg>
+<status status="PASS" starttime="20230306 17:08:01.029" endtime="20230306 17:08:01.029"/>
 </kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>window.scrollTo(0,200)</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20230306 15:24:00.678" level="INFO">Executing JavaScript:
-window.scrollTo(0,200)
-Without any arguments.</msg>
-<status status="PASS" starttime="20230306 15:24:00.677" endtime="20230306 15:24:00.683"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${ImplicitTime}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230306 17:08:01.029" endtime="20230306 17:08:01.029"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230306 15:24:05.695" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230306 15:24:00.684" endtime="20230306 15:24:05.696"/>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10 seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230306 17:08:01.029" endtime="20230306 17:08:01.029"/>
 </kw>
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<arg>xpath://tbody/tr[11]/td[2]/select[1]</arg>
-<arg>ALGERIA</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<msg timestamp="20230306 15:24:05.697" level="INFO">Selecting options from selection list 'xpath://tbody/tr[11]/td[2]/select[1]' by label ALGERIA.</msg>
-<status status="PASS" starttime="20230306 15:24:05.697" endtime="20230306 15:24:05.761"/>
+<kw name="Get Selenium Implicit Wait" library="SeleniumLibrary">
+<var>${ImplicitTime}</var>
+<doc>Gets the implicit wait value used by Selenium.</doc>
+<msg timestamp="20230306 17:08:01.029" level="INFO">${ImplicitTime} = 10 seconds</msg>
+<status status="PASS" starttime="20230306 17:08:01.029" endtime="20230306 17:08:01.029"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230306 15:24:10.770" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230306 15:24:05.762" endtime="20230306 15:24:10.770"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${ImplicitTime}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230306 17:08:01.029" endtime="20230306 17:08:01.029"/>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>Gender</arg>
+<arg>M</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20230306 17:08:01.029" level="INFO">Selecting 'M' from radio button 'Gender'.</msg>
+<status status="PASS" starttime="20230306 17:08:01.029" endtime="20230306 17:08:01.092"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:FirstName</arg>
+<arg>David</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230306 17:08:01.092" level="INFO">Typing text 'David' into text field 'name:FirstName'.</msg>
+<status status="PASS" starttime="20230306 17:08:01.092" endtime="20230306 17:08:01.165"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:LastName</arg>
+<arg>John</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230306 17:08:01.165" level="INFO">Typing text 'John' into text field 'name:LastName'.</msg>
+<status status="PASS" starttime="20230306 17:08:01.165" endtime="20230306 17:08:01.233"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:Email1</arg>
+<arg>test@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230306 17:08:01.233" level="INFO">Typing text 'test@gmail.com' into text field 'name:Email1'.</msg>
+<msg timestamp="20230306 17:08:11.479" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-22.png"&gt;&lt;img src="selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230306 17:08:11.479" level="FAIL">Element with locator 'name:Email1' not found.</msg>
+<status status="FAIL" starttime="20230306 17:08:01.233" endtime="20230306 17:08:11.479"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:Password</arg>
+<arg>davidjohn</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230306 17:08:11.479" endtime="20230306 17:08:11.479"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:ConfirmPassword</arg>
+<arg>davidjohn</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230306 17:08:11.479" endtime="20230306 17:08:11.479"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230306 15:24:10.771" endtime="20230306 15:24:12.936"/>
+<status status="NOT RUN" starttime="20230306 17:08:11.479" endtime="20230306 17:08:11.479"/>
 </kw>
-<status status="PASS" starttime="20230306 15:23:51.637" endtime="20230306 15:24:12.961"/>
+<status status="FAIL" starttime="20230306 17:07:57.457" endtime="20230306 17:08:11.479">Element with locator 'name:Email1' not found.</status>
 </test>
-<status status="PASS" starttime="20230306 15:23:51.475" endtime="20230306 15:24:12.993"/>
+<status status="FAIL" starttime="20230306 17:07:57.283" endtime="20230306 17:08:11.479"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="dropDown">dropDown</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="implicitWait">implicitWait</stat>
 </suite>
 </statistics>
 <errors>

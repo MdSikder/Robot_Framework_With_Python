@@ -16,7 +16,7 @@ Handling DropDowns
 
 #     need id & name of the dropdown
 
-    select from list by label   xpath://tbody/tr[11]/td[2]/select[1]    ALGERIA
+    select from list by label   xpath://tbody/tr[11]/td[2]/select[1]    BANGLADESH
     sleep    5
 
     close browser
