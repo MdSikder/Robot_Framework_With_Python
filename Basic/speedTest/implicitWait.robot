@@ -22,7 +22,7 @@ Timeout Test
     select radio button    Gender   M
     input text    name:FirstName    David
     input text    name:LastName     John
-    input text    name:Email1         test@gmail.com
+    input text    name:Email         test@gmail.com
     input text    name:Password     davidjohn
     input text    name:ConfirmPassword  davidjohn
 
