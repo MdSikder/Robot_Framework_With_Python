@@ -1,43 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.0 on win32)" generated="20230307 13:10:22.746" rpa="false" schemaversion="3">
-<suite id="s1" name="Mouse Operation" source="C:\Users\KloverCloud\PycharmProjects\Robot_Framework_With_Python\Basic\mouseOperation\mouse_operation.robot">
-<test id="s1-t1" name="Tab Handle Test" line="7">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>http://dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230307 13:10:22.895" level="INFO">Opening browser 'chrome' to base url 'http://dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html'.</msg>
-<status status="PASS" starttime="20230307 13:10:22.895" endtime="20230307 13:10:27.871"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230307 13:10:27.871" endtime="20230307 13:10:28.001"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
+<robot generator="Robot 6.0.2 (Python 3.9.0 on win32)" generated="20230309 12:52:52.010" rpa="false" schemaversion="3">
+<suite id="s1" name="For Loop" source="C:\Users\KloverCloud\PycharmProjects\Robot_Framework_With_Python\Basic\for_llop\for_loop.robot">
+<test id="s1-t1" name=" FORloop6withExit" line="32">
+<kw name="Create List" library="BuiltIn">
+<var>@{items}</var>
+<arg>1</arg>
 <arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230307 13:10:30.010" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230307 13:10:28.001" endtime="20230307 13:10:30.010"/>
-</kw>
-<kw name="Drag And Drop" library="SeleniumLibrary">
-<arg>id:box6</arg>
-<arg>id:box106</arg>
-<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
-<status status="PASS" starttime="20230307 13:10:30.010" endtime="20230307 13:10:30.647"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<arg>4</arg>
 <arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230307 13:10:35.659" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230307 13:10:30.650" endtime="20230307 13:10:35.659"/>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20230309 12:52:52.027" level="INFO">@{items} = [ 1 | 2 | 3 | 4 | 5 ]</msg>
+<status status="PASS" starttime="20230309 12:52:52.027" endtime="20230309 12:52:52.027"/>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230307 13:10:35.659" endtime="20230307 13:10:37.863"/>
+<for flavor="IN">
+<var>${i}</var>
+<value>@{items}</value>
+<iter>
+<var name="${i}">1</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230309 12:52:52.029" endtime="20230309 12:52:52.030"/>
 </kw>
-<status status="PASS" starttime="20230307 13:10:22.895" endtime="20230307 13:10:37.863"/>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${i}==6</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20230309 12:52:52.030" endtime="20230309 12:52:52.030"/>
+</kw>
+<status status="PASS" starttime="20230309 12:52:52.029" endtime="20230309 12:52:52.030"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230309 12:52:52.030" endtime="20230309 12:52:52.030"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${i}==6</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20230309 12:52:52.031" endtime="20230309 12:52:52.031"/>
+</kw>
+<status status="PASS" starttime="20230309 12:52:52.030" endtime="20230309 12:52:52.031"/>
+</iter>
+<iter>
+<var name="${i}">3</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230309 12:52:52.031" endtime="20230309 12:52:52.031"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${i}==6</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20230309 12:52:52.031" endtime="20230309 12:52:52.031"/>
+</kw>
+<status status="PASS" starttime="20230309 12:52:52.031" endtime="20230309 12:52:52.031"/>
+</iter>
+<iter>
+<var name="${i}">4</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230309 12:52:52.031" endtime="20230309 12:52:52.032"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${i}==6</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20230309 12:52:52.032" endtime="20230309 12:52:52.032"/>
+</kw>
+<status status="PASS" starttime="20230309 12:52:52.031" endtime="20230309 12:52:52.032"/>
+</iter>
+<iter>
+<var name="${i}">5</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230309 12:52:52.032" endtime="20230309 12:52:52.032"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${i}==6</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20230309 12:52:52.032" endtime="20230309 12:52:52.033"/>
+</kw>
+<status status="PASS" starttime="20230309 12:52:52.032" endtime="20230309 12:52:52.033"/>
+</iter>
+<status status="PASS" starttime="20230309 12:52:52.029" endtime="20230309 12:52:52.033"/>
+</for>
+<status status="PASS" starttime="20230309 12:52:52.027" endtime="20230309 12:52:52.033"/>
 </test>
-<status status="PASS" starttime="20230307 13:10:22.746" endtime="20230307 13:10:37.866"/>
+<status status="PASS" starttime="20230309 12:52:52.011" endtime="20230309 12:52:52.034"/>
 </suite>
 <statistics>
 <total>
@@ -46,7 +99,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Mouse Operation">Mouse Operation</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="For Loop">For Loop</stat>
 </suite>
 </statistics>
 <errors>
