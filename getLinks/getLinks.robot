@@ -13,7 +13,7 @@ Tab Handle Test
 
     @{LinkItems}    create list
 
-    FOR    ${i}     IN RANGE    1       ${TotalLinks}
+    FOR    ${i}     IN RANGE    1       ${TotalLinks}+1
         ${linkText}=    get text    xpath:(//a)[${i}]
         log to console    ${linkText}
     END
