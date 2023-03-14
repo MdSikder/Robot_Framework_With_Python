@@ -34,7 +34,6 @@ Enter Adress1
     input text          ${txt_add1}        ${address1}
 
 
-
 Enter City
     [Arguments]    ${city}
     input text          ${txt_city}        ${city}
