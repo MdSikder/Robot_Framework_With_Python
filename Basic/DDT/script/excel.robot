@@ -9,7 +9,7 @@ Suite Teardown      Close Browsers
 Test Template       Invalid login
 
 *** Test Cases ***
-LoginTestwithExcel  using  ${username}  and   ${password}
+LoginTestwithExcel    ${username}    ${password}
 
 *** Keywords ***
 Invalid login
@@ -17,4 +17,5 @@ Invalid login
     Input Username     ${username}
     Input pwd       ${password}
     click login button
+    #Validation
     Error message should be visible

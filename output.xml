@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.0 on win32)" generated="20230314 11:33:39.498" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.9.0 on win32)" generated="20230315 23:52:14.086" rpa="false" schemaversion="3">
 <suite id="s1" name="loginTest" source="C:\Users\KloverCloud\PycharmProjects\Robot_Framework_With_Python\loginTestDemo\TestCases\loginTest.robot">
 <test id="s1-t1" name="LoginTest" line="6">
 <kw name="open the Browser" library="login">
@@ -7,54 +7,54 @@
 <arg>https://demo.guru99.com/test/newtours/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230314 11:33:39.706" level="INFO">Opening browser 'chrome' to base url 'https://demo.guru99.com/test/newtours/'.</msg>
-<status status="PASS" starttime="20230314 11:33:39.706" endtime="20230314 11:33:44.252"/>
+<msg timestamp="20230315 23:52:14.375" level="INFO">Opening browser 'chrome' to base url 'https://demo.guru99.com/test/newtours/'.</msg>
+<status status="PASS" starttime="20230315 23:52:14.374" endtime="20230315 23:52:18.367"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230314 11:33:44.252" endtime="20230314 11:33:44.376"/>
+<status status="PASS" starttime="20230315 23:52:18.367" endtime="20230315 23:52:18.506"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${txt_LoginUserName}</arg>
 <arg>tutorial</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230314 11:33:44.376" level="INFO">Typing text 'tutorial' into text field 'name:userName'.</msg>
-<status status="PASS" starttime="20230314 11:33:44.376" endtime="20230314 11:33:44.487"/>
+<msg timestamp="20230315 23:52:18.508" level="INFO">Typing text 'tutorial' into text field 'name:userName'.</msg>
+<status status="PASS" starttime="20230315 23:52:18.507" endtime="20230315 23:52:18.608"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${txt_LoginPassword}</arg>
 <arg>tutorial</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230314 11:33:44.487" level="INFO">Typing text 'tutorial' into text field 'name:password'.</msg>
-<status status="PASS" starttime="20230314 11:33:44.487" endtime="20230314 11:33:44.638"/>
+<msg timestamp="20230315 23:52:18.609" level="INFO">Typing text 'tutorial' into text field 'name:password'.</msg>
+<status status="PASS" starttime="20230315 23:52:18.608" endtime="20230315 23:52:18.693"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${btn_signIn}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230314 11:33:44.638" level="INFO">Clicking button 'xpath://input[@name='submit']'.</msg>
-<status status="PASS" starttime="20230314 11:33:44.638" endtime="20230314 11:33:46.726"/>
+<msg timestamp="20230315 23:52:18.693" level="INFO">Clicking button 'xpath://input[@name='submit']'.</msg>
+<status status="PASS" starttime="20230315 23:52:18.693" endtime="20230315 23:52:19.893"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Login: Mercury Tours</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20230314 11:33:46.728" level="INFO">Page title is 'Login: Mercury Tours'.</msg>
-<status status="PASS" starttime="20230314 11:33:46.726" endtime="20230314 11:33:46.728"/>
+<msg timestamp="20230315 23:52:19.901" level="INFO">Page title is 'Login: Mercury Tours'.</msg>
+<status status="PASS" starttime="20230315 23:52:19.893" endtime="20230315 23:52:19.901"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20230314 11:33:46.728" endtime="20230314 11:33:52.933"/>
+<status status="PASS" starttime="20230315 23:52:19.901" endtime="20230315 23:52:26.078"/>
 </kw>
-<status status="PASS" starttime="20230314 11:33:39.706" endtime="20230314 11:33:52.933"/>
+<status status="PASS" starttime="20230315 23:52:14.374" endtime="20230315 23:52:26.078"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230314 11:33:55.934" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230314 11:33:52.933" endtime="20230314 11:33:55.935"/>
+<msg timestamp="20230315 23:52:29.080" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230315 23:52:26.079" endtime="20230315 23:52:29.080"/>
 </kw>
-<status status="PASS" starttime="20230314 11:33:39.706" endtime="20230314 11:33:55.936"/>
+<status status="PASS" starttime="20230315 23:52:14.373" endtime="20230315 23:52:29.080"/>
 </test>
-<status status="PASS" starttime="20230314 11:33:39.504" endtime="20230314 11:33:55.939"/>
+<status status="PASS" starttime="20230315 23:52:14.087" endtime="20230315 23:52:29.082"/>
 </suite>
 <statistics>
 <total>
