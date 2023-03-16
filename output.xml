@@ -1,69 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.0 on win32)" generated="20230315 23:52:14.086" rpa="false" schemaversion="3">
-<suite id="s1" name="loginTest" source="C:\Users\KloverCloud\PycharmProjects\Robot_Framework_With_Python\loginTestDemo\TestCases\loginTest.robot">
-<test id="s1-t1" name="LoginTest" line="6">
-<kw name="open the Browser" library="login">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://demo.guru99.com/test/newtours/</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230315 23:52:14.375" level="INFO">Opening browser 'chrome' to base url 'https://demo.guru99.com/test/newtours/'.</msg>
-<status status="PASS" starttime="20230315 23:52:14.374" endtime="20230315 23:52:18.367"/>
+<robot generator="Robot 6.0.2 (Python 3.9.0 on win32)" generated="20230316 15:09:09.769" rpa="false" schemaversion="3">
+<suite id="s1" name="SanityTest" source="C:\Users\KloverCloud\PycharmProjects\Robot_Framework_With_Python\ApiTesting\demo_projects\API\Tests\SanityTest.robot">
+<test id="s1-t1" name="Test title" line="14">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>session1</arg>
+<arg>${base_url}</arg>
+<arg>disable_warnings=1</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20230316 15:09:09.915" level="INFO">Creating Session using : alias=session1, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20230316 15:09:09.915" endtime="20230316 15:09:09.915"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230315 23:52:18.367" endtime="20230315 23:52:18.506"/>
+<kw name="Set Variable" library="BuiltIn">
+<var>${endpoint}</var>
+<arg>/api/users/?page=2</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230316 15:09:09.916" level="INFO">${endpoint} = /api/users/?page=2</msg>
+<status status="PASS" starttime="20230316 15:09:09.916" endtime="20230316 15:09:09.916"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${txt_LoginUserName}</arg>
-<arg>tutorial</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230315 23:52:18.508" level="INFO">Typing text 'tutorial' into text field 'name:userName'.</msg>
-<status status="PASS" starttime="20230315 23:52:18.507" endtime="20230315 23:52:18.608"/>
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>session1</arg>
+<arg>${endpoint}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20230316 15:09:10.119" level="INFO">GET Request : url=https://reqres.in/api/users/?page=2 
+ path_url=/api/users/?page=2 
+ headers={'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20230316 15:09:10.119" level="INFO">GET Response : url=https://reqres.in/api/users/?page=2 
+ status=200, reason=OK 
+ headers={'Date': 'Thu, 16 Mar 2023 09:09:10 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"406-ut0vzoCuidvyMf8arZpMpJ6ZRDw"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'HIT', 'Age': '4292', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=GoJZBQgjAwj27Jh2tHpjcAGhAty5UJasrIPby%2F6AgODxQOwo5%2BZXiSsxYH0ytQJecJyetNKmB79U8jyYAhEVo4PiJCjSAZuPM37TkzazXc3BAOwXP6nPsCJmUSDkgxMNK1%2Bwyi34jQ%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '7a8bdb1739a09fc5-SIN', 'Content-Encoding': 'gzip'} 
+ body={"page":2,"per_page":6,"total":12,"total_pages":2,"data":[{"id":7,"email":"michael.lawson@reqres.in","first_name":"Michael","last_name":"Lawson","avatar":"https://reqres.in/img/faces/7-image.jpg"},{"id":8,"email":"lindsay.ferguson@reqres.in","first_name":"Lindsay","last_name":"Ferguson","avatar":"https://reqres.in/img/faces/8-image.jpg"},{"id":9,"email":"tobias.funke@reqres.in","first_name":"Tobias","last_name":"Funke","avatar":"https://reqres.in/img/faces/9-image.jpg"},{"id":10,"email":"byron.fields@reqres.in","first_name":"Byron","last_name":"Fields","avatar":"https://reqres.in/img/faces/10-image.jpg"},{"id":11,"email":"george.edwards@reqres.in","first_name":"George","last_name":"Edwards","avatar":"https://reqres.in/img/faces/11-image.jpg"},{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://reqres.in/img/faces/12-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}} 
+ </msg>
+<msg timestamp="20230316 15:09:10.119" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230316 15:09:09.917" endtime="20230316 15:09:10.119"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${txt_LoginPassword}</arg>
-<arg>tutorial</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230315 23:52:18.609" level="INFO">Typing text 'tutorial' into text field 'name:password'.</msg>
-<status status="PASS" starttime="20230315 23:52:18.608" endtime="20230315 23:52:18.693"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.headers}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230316 15:09:10.120" endtime="20230316 15:09:10.121"/>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${btn_signIn}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230315 23:52:18.693" level="INFO">Clicking button 'xpath://input[@name='submit']'.</msg>
-<status status="PASS" starttime="20230315 23:52:18.693" endtime="20230315 23:52:19.893"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230316 15:09:10.123" endtime="20230316 15:09:10.124"/>
 </kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
-<arg>Login: Mercury Tours</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20230315 23:52:19.901" level="INFO">Page title is 'Login: Mercury Tours'.</msg>
-<status status="PASS" starttime="20230315 23:52:19.893" endtime="20230315 23:52:19.901"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230316 15:09:10.125" endtime="20230316 15:09:10.126"/>
 </kw>
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20230315 23:52:19.901" endtime="20230315 23:52:26.078"/>
+<kw name="Log" library="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230316 15:09:10.127" level="INFO">{"page":2,"per_page":6,"total":12,"total_pages":2,"data":[{"id":7,"email":"michael.lawson@reqres.in","first_name":"Michael","last_name":"Lawson","avatar":"https://reqres.in/img/faces/7-image.jpg"},{"id":8,"email":"lindsay.ferguson@reqres.in","first_name":"Lindsay","last_name":"Ferguson","avatar":"https://reqres.in/img/faces/8-image.jpg"},{"id":9,"email":"tobias.funke@reqres.in","first_name":"Tobias","last_name":"Funke","avatar":"https://reqres.in/img/faces/9-image.jpg"},{"id":10,"email":"byron.fields@reqres.in","first_name":"Byron","last_name":"Fields","avatar":"https://reqres.in/img/faces/10-image.jpg"},{"id":11,"email":"george.edwards@reqres.in","first_name":"George","last_name":"Edwards","avatar":"https://reqres.in/img/faces/11-image.jpg"},{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://reqres.in/img/faces/12-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}</msg>
+<status status="PASS" starttime="20230316 15:09:10.127" endtime="20230316 15:09:10.127"/>
 </kw>
-<status status="PASS" starttime="20230315 23:52:14.374" endtime="20230315 23:52:26.078"/>
+<kw name="Convert To String" library="BuiltIn">
+<var>${status_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20230316 15:09:10.128" level="INFO">${status_code} = 200</msg>
+<status status="PASS" starttime="20230316 15:09:10.128" endtime="20230316 15:09:10.128"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230315 23:52:29.080" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230315 23:52:26.079" endtime="20230315 23:52:29.080"/>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${status_code}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230316 15:09:10.129" endtime="20230316 15:09:10.129"/>
 </kw>
-<status status="PASS" starttime="20230315 23:52:14.373" endtime="20230315 23:52:29.080"/>
+<kw name="Convert String To Json" library="JSONLibrary">
+<var>${json_response}</var>
+<arg>${response.content}</arg>
+<doc>Convert String to JSON object</doc>
+<msg timestamp="20230316 15:09:10.130" level="INFO">${json_response} = {'page': 2, 'per_page': 6, 'total': 12, 'total_pages': 2, 'data': [{'id': 7, 'email': 'michael.lawson@reqres.in', 'first_name': 'Michael', 'last_name': 'Lawson', 'avatar': 'https://reqres.in/img/faces...</msg>
+<status status="PASS" starttime="20230316 15:09:10.130" endtime="20230316 15:09:10.130"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>${contents}</var>
+<arg>${json_response}</arg>
+<arg>${page_path}</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20230316 15:09:10.146" level="INFO">${contents} = [2]</msg>
+<status status="PASS" starttime="20230316 15:09:10.131" endtime="20230316 15:09:10.146"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${contents}</var>
+<arg>${contents}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20230316 15:09:10.148" level="INFO">${contents} = [2]</msg>
+<status status="PASS" starttime="20230316 15:09:10.148" endtime="20230316 15:09:10.148"/>
+</kw>
+<kw name="Remove String Using Regexp" library="String">
+<var>${contents}</var>
+<arg>${contents}</arg>
+<arg>['\\[\\],]</arg>
+<doc>Removes ``patterns`` from the given ``string``.</doc>
+<msg timestamp="20230316 15:09:10.149" level="INFO">${contents} = 2</msg>
+<status status="PASS" starttime="20230316 15:09:10.149" endtime="20230316 15:09:10.149"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${contents}</arg>
+<arg>2</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230316 15:09:10.149" endtime="20230316 15:09:10.149"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${headerValue}</var>
+<arg>${response.headers}</arg>
+<arg>Content-type</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20230316 15:09:10.150" level="INFO">${headerValue} = application/json; charset=utf-8</msg>
+<status status="PASS" starttime="20230316 15:09:10.150" endtime="20230316 15:09:10.150"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${headerValue}</arg>
+<arg>application/json; charset=utf-8</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230316 15:09:10.151" endtime="20230316 15:09:10.151"/>
+</kw>
+<tag>Demo</tag>
+<status status="PASS" starttime="20230316 15:09:09.915" endtime="20230316 15:09:10.151"/>
 </test>
-<status status="PASS" starttime="20230315 23:52:14.087" endtime="20230315 23:52:29.082"/>
+<doc>Robot Framework Demo</doc>
+<status status="PASS" starttime="20230316 15:09:09.770" endtime="20230316 15:09:10.153"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">Demo</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="loginTest">loginTest</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="SanityTest">SanityTest</stat>
 </suite>
 </statistics>
 <errors>
