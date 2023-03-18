@@ -19,7 +19,7 @@ Tab Handle Test
     maximize browser window
     sleep    3
 
-    double click element    xpath://*[@id="HTML10"]/div[1]/button
+    double click element    xpath://*[@id="HTML10"]/div[1]/
     sleep    3
     close browser
 

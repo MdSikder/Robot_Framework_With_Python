@@ -1,139 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.0 on win32)" generated="20230316 15:09:09.769" rpa="false" schemaversion="3">
-<suite id="s1" name="SanityTest" source="C:\Users\KloverCloud\PycharmProjects\Robot_Framework_With_Python\ApiTesting\demo_projects\API\Tests\SanityTest.robot">
-<test id="s1-t1" name="Test title" line="14">
-<kw name="Create Session" library="RequestsLibrary">
-<arg>session1</arg>
-<arg>${base_url}</arg>
-<arg>disable_warnings=1</arg>
-<doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20230316 15:09:09.915" level="INFO">Creating Session using : alias=session1, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20230316 15:09:09.915" endtime="20230316 15:09:09.915"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${endpoint}</var>
-<arg>/api/users/?page=2</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20230316 15:09:09.916" level="INFO">${endpoint} = /api/users/?page=2</msg>
-<status status="PASS" starttime="20230316 15:09:09.916" endtime="20230316 15:09:09.916"/>
-</kw>
-<kw name="GET On Session" library="RequestsLibrary">
-<var>${response}</var>
-<arg>session1</arg>
-<arg>${endpoint}</arg>
-<doc>Sends a GET request on a previously created HTTP Session.</doc>
-<msg timestamp="20230316 15:09:10.119" level="INFO">GET Request : url=https://reqres.in/api/users/?page=2 
- path_url=/api/users/?page=2 
- headers={'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
- body=None 
- </msg>
-<msg timestamp="20230316 15:09:10.119" level="INFO">GET Response : url=https://reqres.in/api/users/?page=2 
- status=200, reason=OK 
- headers={'Date': 'Thu, 16 Mar 2023 09:09:10 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"406-ut0vzoCuidvyMf8arZpMpJ6ZRDw"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'HIT', 'Age': '4292', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=GoJZBQgjAwj27Jh2tHpjcAGhAty5UJasrIPby%2F6AgODxQOwo5%2BZXiSsxYH0ytQJecJyetNKmB79U8jyYAhEVo4PiJCjSAZuPM37TkzazXc3BAOwXP6nPsCJmUSDkgxMNK1%2Bwyi34jQ%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '7a8bdb1739a09fc5-SIN', 'Content-Encoding': 'gzip'} 
- body={"page":2,"per_page":6,"total":12,"total_pages":2,"data":[{"id":7,"email":"michael.lawson@reqres.in","first_name":"Michael","last_name":"Lawson","avatar":"https://reqres.in/img/faces/7-image.jpg"},{"id":8,"email":"lindsay.ferguson@reqres.in","first_name":"Lindsay","last_name":"Ferguson","avatar":"https://reqres.in/img/faces/8-image.jpg"},{"id":9,"email":"tobias.funke@reqres.in","first_name":"Tobias","last_name":"Funke","avatar":"https://reqres.in/img/faces/9-image.jpg"},{"id":10,"email":"byron.fields@reqres.in","first_name":"Byron","last_name":"Fields","avatar":"https://reqres.in/img/faces/10-image.jpg"},{"id":11,"email":"george.edwards@reqres.in","first_name":"George","last_name":"Edwards","avatar":"https://reqres.in/img/faces/11-image.jpg"},{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://reqres.in/img/faces/12-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}} 
- </msg>
-<msg timestamp="20230316 15:09:10.119" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20230316 15:09:09.917" endtime="20230316 15:09:10.119"/>
+<robot generator="Robot 6.0.2 (Python 3.9.0 on win32)" generated="20230318 17:12:15.955" rpa="false" schemaversion="3">
+<suite id="s1" name="TC1" source="C:\Users\KloverCloud\PycharmProjects\Robot_Framework_With_Python\CallingClass\TC1.robot">
+<test id="s1-t1" name="basic test" line="6">
+<kw name="Call Method" library="BuiltIn">
+<var>${result}</var>
+<arg>${cal}</arg>
+<arg>addition</arg>
+<arg>20</arg>
+<arg>40</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<msg timestamp="20230318 17:12:15.976" level="INFO">${result} = 60.0</msg>
+<status status="PASS" starttime="20230318 17:12:15.976" endtime="20230318 17:12:15.976"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${response.headers}</arg>
+<arg>${result}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230316 15:09:10.120" endtime="20230316 15:09:10.121"/>
+<status status="PASS" starttime="20230318 17:12:15.978" endtime="20230318 17:12:15.978"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${response.status_code}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230316 15:09:10.123" endtime="20230316 15:09:10.124"/>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${result}</arg>
+<arg>60</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<msg timestamp="20230318 17:12:15.978" level="INFO">Argument types are:
+&lt;class 'float'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20230318 17:12:15.978" endtime="20230318 17:12:15.979"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${response.content}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230316 15:09:10.125" endtime="20230316 15:09:10.126"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${response.content}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230316 15:09:10.127" level="INFO">{"page":2,"per_page":6,"total":12,"total_pages":2,"data":[{"id":7,"email":"michael.lawson@reqres.in","first_name":"Michael","last_name":"Lawson","avatar":"https://reqres.in/img/faces/7-image.jpg"},{"id":8,"email":"lindsay.ferguson@reqres.in","first_name":"Lindsay","last_name":"Ferguson","avatar":"https://reqres.in/img/faces/8-image.jpg"},{"id":9,"email":"tobias.funke@reqres.in","first_name":"Tobias","last_name":"Funke","avatar":"https://reqres.in/img/faces/9-image.jpg"},{"id":10,"email":"byron.fields@reqres.in","first_name":"Byron","last_name":"Fields","avatar":"https://reqres.in/img/faces/10-image.jpg"},{"id":11,"email":"george.edwards@reqres.in","first_name":"George","last_name":"Edwards","avatar":"https://reqres.in/img/faces/11-image.jpg"},{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://reqres.in/img/faces/12-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}</msg>
-<status status="PASS" starttime="20230316 15:09:10.127" endtime="20230316 15:09:10.127"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${status_code}</var>
-<arg>${response.status_code}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20230316 15:09:10.128" level="INFO">${status_code} = 200</msg>
-<status status="PASS" starttime="20230316 15:09:10.128" endtime="20230316 15:09:10.128"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${status_code}</arg>
-<arg>200</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20230316 15:09:10.129" endtime="20230316 15:09:10.129"/>
-</kw>
-<kw name="Convert String To Json" library="JSONLibrary">
-<var>${json_response}</var>
-<arg>${response.content}</arg>
-<doc>Convert String to JSON object</doc>
-<msg timestamp="20230316 15:09:10.130" level="INFO">${json_response} = {'page': 2, 'per_page': 6, 'total': 12, 'total_pages': 2, 'data': [{'id': 7, 'email': 'michael.lawson@reqres.in', 'first_name': 'Michael', 'last_name': 'Lawson', 'avatar': 'https://reqres.in/img/faces...</msg>
-<status status="PASS" starttime="20230316 15:09:10.130" endtime="20230316 15:09:10.130"/>
-</kw>
-<kw name="Get Value From Json" library="JSONLibrary">
-<var>${contents}</var>
-<arg>${json_response}</arg>
-<arg>${page_path}</arg>
-<doc>Get Value From JSON using JSONPath</doc>
-<msg timestamp="20230316 15:09:10.146" level="INFO">${contents} = [2]</msg>
-<status status="PASS" starttime="20230316 15:09:10.131" endtime="20230316 15:09:10.146"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${contents}</var>
-<arg>${contents}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20230316 15:09:10.148" level="INFO">${contents} = [2]</msg>
-<status status="PASS" starttime="20230316 15:09:10.148" endtime="20230316 15:09:10.148"/>
-</kw>
-<kw name="Remove String Using Regexp" library="String">
-<var>${contents}</var>
-<arg>${contents}</arg>
-<arg>['\\[\\],]</arg>
-<doc>Removes ``patterns`` from the given ``string``.</doc>
-<msg timestamp="20230316 15:09:10.149" level="INFO">${contents} = 2</msg>
-<status status="PASS" starttime="20230316 15:09:10.149" endtime="20230316 15:09:10.149"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${contents}</arg>
-<arg>2</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20230316 15:09:10.149" endtime="20230316 15:09:10.149"/>
-</kw>
-<kw name="Get From Dictionary" library="Collections">
-<var>${headerValue}</var>
-<arg>${response.headers}</arg>
-<arg>Content-type</arg>
-<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20230316 15:09:10.150" level="INFO">${headerValue} = application/json; charset=utf-8</msg>
-<status status="PASS" starttime="20230316 15:09:10.150" endtime="20230316 15:09:10.150"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${headerValue}</arg>
-<arg>application/json; charset=utf-8</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20230316 15:09:10.151" endtime="20230316 15:09:10.151"/>
-</kw>
-<tag>Demo</tag>
-<status status="PASS" starttime="20230316 15:09:09.915" endtime="20230316 15:09:10.151"/>
+<status status="PASS" starttime="20230318 17:12:15.976" endtime="20230318 17:12:15.979"/>
 </test>
-<doc>Robot Framework Demo</doc>
-<status status="PASS" starttime="20230316 15:09:09.770" endtime="20230316 15:09:10.153"/>
+<doc>'call Method' Keyword deomo program</doc>
+<status status="PASS" starttime="20230318 17:12:15.956" endtime="20230318 17:12:15.980"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Demo</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="SanityTest">SanityTest</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC1">TC1</stat>
 </suite>
 </statistics>
 <errors>
