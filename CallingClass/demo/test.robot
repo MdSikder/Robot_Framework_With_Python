@@ -8,6 +8,9 @@ basic test
     log to console    ${result}
     should be equal as numbers    ${result}     60
 
+class Calculator:
+def addition(self, num1, num2):
+erg=float(num1) + float(num2)
+return erg
 
-
-    ${is_contains_apple}=   call method    ${cal}   kwargs_demo     orange mango Apple kiwi
+cal = Calculator
