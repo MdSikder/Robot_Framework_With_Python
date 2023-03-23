@@ -9,7 +9,7 @@ Suite Teardown      Close Browsers
 Test Template       Invalid login
 
 *** Test Cases ***
-LoginTestwithExcel  using  ${username}  and   ${password}
+LoginTestwithExcel  ${username}   ${password}
 
 *** Keywords ***
 Invalid login
