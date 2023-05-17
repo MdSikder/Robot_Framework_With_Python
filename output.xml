@@ -1,49 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.0 on win32)" generated="20230324 00:09:45.608" rpa="false" schemaversion="3">
-<suite id="s1" name="Tc2" source="C:\Users\KloverCloud\PycharmProjects\Robot_Framework_With_Python\CallingClass\demo\tc2.robot">
-<test id="s1-t1" name="basic test" line="6">
+<robot generator="Robot 6.0.2 (Python 3.10.5 on win32)" generated="20230517 15:31:30.090" rpa="false" schemaversion="3">
+<suite id="s1" name="TC1" source="C:\Users\KloverCloud\PycharmProjects\Robot_Framework_With_Python\CallingClass\TC1.robot">
+<test id="s1-t1" name="basic test" line="17">
 <kw name="Call Method" library="BuiltIn">
-<var>${result}</var>
-<arg>${cel}</arg>
-<arg>addition</arg>
-<arg>20</arg>
-<arg>40</arg>
+<arg>${cal}</arg>
+<arg>bot</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<msg timestamp="20230324 00:09:45.785" level="FAIL">Calling method 'addition' failed: TypeError: addition() takes 1 positional argument but 3 were given</msg>
-<status status="FAIL" starttime="20230324 00:09:45.785" endtime="20230324 00:09:45.785"/>
+<msg timestamp="20230517 15:31:30.252" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230517 15:31:30.249" endtime="20230517 15:32:06.336"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${result}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20230324 00:09:45.785" endtime="20230324 00:09:45.785"/>
-</kw>
-<kw name="Should Be Equal As Numbers" library="BuiltIn">
-<arg>${result}</arg>
-<arg>60</arg>
-<doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<status status="NOT RUN" starttime="20230324 00:09:45.785" endtime="20230324 00:09:45.785"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<var>${is_contains_apple}</var>
-<arg>${cel}</arg>
-<arg>kwargs_demo</arg>
-<arg>orange mango Apple kiwi</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="NOT RUN" starttime="20230324 00:09:45.785" endtime="20230324 00:09:45.785"/>
-</kw>
-<status status="FAIL" starttime="20230324 00:09:45.785" endtime="20230324 00:09:45.785">Calling method 'addition' failed: TypeError: addition() takes 1 positional argument but 3 were given</status>
+<status status="PASS" starttime="20230517 15:31:30.248" endtime="20230517 15:32:06.337"/>
 </test>
 <doc>'call Method' Keyword deomo program</doc>
-<status status="FAIL" starttime="20230324 00:09:45.608" endtime="20230324 00:09:45.785"/>
+<status status="PASS" starttime="20230517 15:31:30.092" endtime="20230517 15:32:06.339"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Tc2">Tc2</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC1">TC1</stat>
 </suite>
 </statistics>
 <errors>
