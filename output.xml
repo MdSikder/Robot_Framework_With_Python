@@ -1,27 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.10.5 on win32)" generated="20230517 15:31:30.090" rpa="false" schemaversion="3">
-<suite id="s1" name="TC1" source="C:\Users\KloverCloud\PycharmProjects\Robot_Framework_With_Python\CallingClass\TC1.robot">
-<test id="s1-t1" name="basic test" line="17">
-<kw name="Call Method" library="BuiltIn">
-<arg>${cal}</arg>
-<arg>bot</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<msg timestamp="20230517 15:31:30.252" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<status status="PASS" starttime="20230517 15:31:30.249" endtime="20230517 15:32:06.336"/>
+<robot generator="Robot 6.0.2 (Python 3.7.7 on win32)" generated="20230525 12:24:44.720" rpa="false" schemaversion="3">
+<suite id="s1" name="Tagging" source="C:\Users\KloverCloud\PycharmProjects\Robot_Framework_With_Python\Basic\Grouping\tagging.robot">
+<test id="s1-t1" name="TC2 User LoginTest" line="16">
+<kw name="Log To Console" library="BuiltIn">
+<arg>This is user Login test</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230525 12:24:44.753" endtime="20230525 12:24:44.753"/>
 </kw>
-<status status="PASS" starttime="20230517 15:31:30.248" endtime="20230517 15:32:06.337"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>user Login test is over</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230525 12:24:44.754" endtime="20230525 12:24:44.755"/>
+</kw>
+<tag>regression</tag>
+<status status="PASS" starttime="20230525 12:24:44.752" endtime="20230525 12:24:44.755"/>
 </test>
-<doc>'call Method' Keyword deomo program</doc>
-<status status="PASS" starttime="20230517 15:31:30.092" endtime="20230517 15:32:06.339"/>
+<test id="s1-t2" name="TC3 Change User settings" line="21">
+<kw name="Log To Console" library="BuiltIn">
+<arg>This is change user settings test</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230525 12:24:44.756" endtime="20230525 12:24:44.757"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Change user settings test is over</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230525 12:24:44.757" endtime="20230525 12:24:44.758"/>
+</kw>
+<tag>regression</tag>
+<status status="PASS" starttime="20230525 12:24:44.756" endtime="20230525 12:24:44.759"/>
+</test>
+<status status="PASS" starttime="20230525 12:24:44.722" endtime="20230525 12:24:44.761"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="2" fail="0" skip="0">regression</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="TC1">TC1</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Tagging">Tagging</stat>
 </suite>
 </statistics>
 <errors>

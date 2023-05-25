@@ -1,3 +1,10 @@
+# Run susing tag
+# 'robot --include=sanity Basic/Grouping/tagging.robot'
+#'robot --include=regression Basic/Grouping/tagging.robot'
+
+
+
+
 *** Settings ***
 
 
