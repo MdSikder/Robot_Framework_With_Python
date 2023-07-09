@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.7.7 on win32)" generated="20230613 11:17:58.995" rpa="false" schemaversion="3">
+<suite id="s1" name="Test3" source="C:\Users\KloverCloud\PycharmProjects\Robot_Framework_With_Python\DesktopAppAutomation\test3.robot">
+<kw name="Start Sikuli Process" library="SikuliLibrary" type="SETUP">
+<msg timestamp="20230613 11:17:59.050" level="INFO">Starting process:
+java -jar C:\Users\KloverCloud\AppData\Local\Programs\Python\Python37-32\lib\site-packages\SikuliLibrary\lib\SikuliLibrary.jar 4795 C:\Users\KloverCloud\PycharmProjects\Robot_Framework_With_Python\test</msg>
+<msg timestamp="20230613 11:17:59.066" level="INFO">Start sikuli java process on port 4795</msg>
+<msg timestamp="20230613 11:18:00.150" level="INFO">Sikuli java process is started</msg>
+<status status="PASS" starttime="20230613 11:17:59.050" endtime="20230613 11:18:01.586"/>
+</kw>
+<test id="s1-t1" name="New Mode" line="7">
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>C:\Users\KloverCloud\Documents\test_demo_sikuli</arg>
+<doc>Add image path</doc>
+<msg timestamp="20230613 11:18:01.599" level="INFO">[error] ImagePath: addHTTP: not possible: C:UsersKloverCloudDocuments	est_demo_sikuli
+java.net.MalformedURLException: For input string: "UsersKloverCloudDocuments	est_demo_sikuli"</msg>
+<status status="PASS" starttime="20230613 11:18:01.586" endtime="20230613 11:18:01.599"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>windows_icon.png</arg>
+<doc>Click</doc>
+<msg timestamp="20230613 11:18:01.723" level="FAIL">java.lang.ExceptionInInitializerError: null</msg>
+<status status="FAIL" starttime="20230613 11:18:01.599" endtime="20230613 11:18:01.723"/>
+</kw>
+<status status="FAIL" starttime="20230613 11:18:01.586" endtime="20230613 11:18:01.723">java.lang.ExceptionInInitializerError: null</status>
+</test>
+<kw name="Stop Remote Server" library="SikuliLibrary" type="TEARDOWN">
+<doc>Stops the remote server.</doc>
+<msg timestamp="20230613 11:18:01.723" level="INFO">Robot Framework remote server stopping</msg>
+<status status="PASS" starttime="20230613 11:18:01.723" endtime="20230613 11:18:01.723"/>
+</kw>
+<status status="FAIL" starttime="20230613 11:17:58.995" endtime="20230613 11:18:01.723"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test3">Test3</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
