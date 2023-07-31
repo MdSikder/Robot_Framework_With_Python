@@ -1,44 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.7.7 on win32)" generated="20230717 10:38:15.222" rpa="false" schemaversion="3">
-<suite id="s1" name="Auth" source="C:\Users\KloverCloud\PycharmProjects\Robot_Framework_With_Python\Basic\Auth_signup\auth.robot">
-<test id="s1-t1" name="Tab Handle Test" line="8">
+<robot generator="Robot 6.1.1 (Python 3.7.7 on win32)" generated="20230730 22:48:49.372" rpa="false" schemaversion="4">
+<suite id="s1" name="Chrome" source="C:\Users\KloverCloud\PycharmProjects\Robot_Framework_With_Python\Basic\Browser_setup\chrome.robot">
+<test id="s1-t1" name="Tab Handle Test" line="7">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>http://admin:admin@the-internet.herokuapp.com/basic_auth</arg>
-<arg>chrome</arg>
+<arg>http://www.google.com</arg>
+<arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230717 10:38:15.570" level="INFO">Opening browser 'chrome' to base url 'http://admin:admin@the-internet.herokuapp.com/basic_auth'.</msg>
-<msg timestamp="20230717 10:38:15.574" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<status status="PASS" starttime="20230717 10:38:15.569" endtime="20230717 10:38:21.907"/>
+<msg timestamp="20230730 22:48:49.628" level="INFO">Opening browser 'Chrome' to base url 'http://www.google.com'.</msg>
+<msg timestamp="20230730 22:48:49.628" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230730 22:48:49.628" level="FAIL">TypeError: __init__() got an unexpected keyword argument 'service_log_path'</msg>
+<status status="FAIL" starttime="20230730 22:48:49.628" endtime="20230730 22:48:49.634"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230717 10:38:21.908" endtime="20230717 10:38:22.040"/>
+<status status="NOT RUN" starttime="20230730 22:48:49.634" endtime="20230730 22:48:49.634"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230717 10:38:25.047" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230717 10:38:22.041" endtime="20230717 10:38:25.047"/>
+<status status="NOT RUN" starttime="20230730 22:48:49.634" endtime="20230730 22:48:49.634"/>
 </kw>
-<status status="PASS" starttime="20230717 10:38:15.569" endtime="20230717 10:38:25.049"/>
+<status status="FAIL" starttime="20230730 22:48:49.628" endtime="20230730 22:48:49.634">TypeError: __init__() got an unexpected keyword argument 'service_log_path'</status>
 </test>
-<test id="s1-t2" name="Test Teardown" line="14">
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20230717 10:38:25.050" endtime="20230717 10:38:31.266"/>
-</kw>
-<status status="PASS" starttime="20230717 10:38:25.049" endtime="20230717 10:38:31.267"/>
-</test>
-<status status="PASS" starttime="20230717 10:38:15.224" endtime="20230717 10:38:31.270"/>
+<status status="FAIL" starttime="20230730 22:48:49.386" endtime="20230730 22:48:49.634"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Auth">Auth</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Chrome">Chrome</stat>
 </suite>
 </statistics>
 <errors>
